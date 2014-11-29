@@ -21,7 +21,17 @@
 
         <div class="row">
           <div class="large-6 large-centered medium-9 medium-centered small-12 small-centered columns">
-            <input type="text" placeholder="Digite o nome da rua, número ou nome da linha..." />
+            <input ng-model="index.query" ng-keyup="index.getLinhas(index.query)"
+                   type="text" placeholder="Digite o nome da rua, número ou nome da linha..." />
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-6 large-centered medium-9 medium-centered small-12 small-centered columns">
+            <ul class="pricing-table">
+              <li ng-repeat="linha in index.linhas" class="bullet-item">
+                <a href="#">{{linha.nome}}</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

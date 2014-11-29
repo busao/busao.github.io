@@ -4,11 +4,18 @@
   app.controller('IndexController', ['$http', function($http) {
     var index = this;
 
+    index.query = '';
     index.linhas = [];
 
-    $http.get('/linhas.json').success(function(data) {
-      index.linhas = data;
-    });
+    index.getLinhas = function(query) {
+      if (query.length > 2) {
+        return $http.get('http://localhost:5000/get/linhas/' + query).success(function(data) {
+          index.linhas = data;
+        });
+      } else {
+        return [];
+      }
+    };
 
   }]);
 })();
