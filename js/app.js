@@ -6,6 +6,7 @@
 
     index.query = '';
     index.linhas = [];
+    index.linhaAtual = null;
 
     index.getLinhas = function(query) {
       if (query.length > 2) {
@@ -15,6 +16,11 @@
       } else {
         return [];
       }
+    };
+
+    index.setLinhaAtual = function(linha) {
+      index.linhaAtual = linha;
+      console.log('Linha ' + linha.numero + ' selecionada.');
     };
 
   }]);
