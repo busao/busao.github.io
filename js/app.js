@@ -10,7 +10,7 @@
 
     index.getLinhas = function(query) {
       if (query.length > 2) {
-        return $http.get('http://localhost:5000/get/linhas/' + query).success(function(data) {
+        return $http.get('https://busao.herokuapp.com/get/linhas/' + query).success(function(data) {
           index.linhas = data;
         });
       } else {
