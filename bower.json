@@ -1,8 +1,8 @@
 {
-  "name": "angular-seed",
-  "description": "A starter project for AngularJS",
-  "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-seed",
+  "name": "busao",
+  "description": "Saiba quais ônibus passam na sua rua",
+  "version": "0.1",
+  "homepage": "http://busao.github.com",
   "license": "MIT",
   "private": true,
   "dependencies": {
