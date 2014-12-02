@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bem vindo ao Busão!</title>
     <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/busao.css" />
     <script src="js/vendor/modernizr.js"></script>
     <script src="js/angular.min.js"></script>
     <script src="js/busao.js"></script>
@@ -42,7 +43,7 @@
         </div>
         <div class="row">
           <div class="large-6 large-centered medium-9 medium-centered small-12 small-centered columns">
-            <ul class="pricing-table">
+            <ul id="main-table" class="pricing-table">
               <li ng-repeat="linha in index.linhas" class="bullet-item">
                 <a ng-click="index.setLinhaAtual(linha)" href="#">{{linha.nome}}</a>
               </li>
