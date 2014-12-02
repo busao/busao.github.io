@@ -2,8 +2,8 @@
   'use strict';
 
   angular
-  .module('busao')
-  .directive('formLinhas', formLinhas);
+    .module('busao')
+    .directive('formLinhas', formLinhas);
 
   function formLinhas() {
     return {

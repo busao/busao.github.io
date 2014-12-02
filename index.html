@@ -10,12 +10,13 @@
     <script src="js/busao.js"></script>
     <script src="js/indexController.js"></script>
     <script src="js/linhasService.js"></script>
-    <script src="js/form-linhas-directive.js"></script>
+    <script src="js/formLinhasDirective.js"></script>
+    <script src="js/detalhesLinhaDirective.js"></script>
   </head>
   <body>
 
     <div ng-controller="IndexController as index" class="row">
-      <div class="large-12 large-centered columns">
+      <div ng-hide="index.isAlgumaLinhaSelecionada()" class="large-12 large-centered columns">
         <div class="row">
           <div class="large-2 medium-3 small-4 large-centered medium-centered small-centered columns">
             <h1>Busão</ h1>
@@ -37,6 +38,7 @@
           </div>
         </div>
       </div>
+      <detalhes-linha ng-show="index.isAlgumaLinhaSelecionada()"></detalhes-linha>
     </div>
 
     <script src="js/vendor/jquery.js"></script>

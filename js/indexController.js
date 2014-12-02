@@ -9,8 +9,9 @@
     var index = this;
 
     index.getLinhas = getLinhas;
+    index.isAlgumaLinhaSelecionada = isAlgumaLinhaSelecionada;
     index.setLinhaAtual = setLinhaAtual;
-    index.linhaAtual = {};
+    index.linhaAtual = null;
     index.linhas = [];
     index.query = '';
 
@@ -18,6 +19,10 @@
       linhasService.pesquisarLinhas(query, function(data) {
         index.linhas = data;
       });
+    }
+
+    function isAlgumaLinhaSelecionada() {
+      return index.linhaAtual;
     }
 
     function setLinhaAtual(linha) {
