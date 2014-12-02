@@ -1,7 +1,7 @@
 {
   "name": "busao",
   "private": true,
-  "version": "0.1",
+  "version": "0.0.1",
   "description": "Saiba quais ônibus passam na sua rua",
   "repository": "https://github.com/busao/busao.github.io",
   "license": "MIT",
@@ -11,7 +11,7 @@
     "http-server": "^0.6.1",
     "bower": "^1.3.1",
     "shelljs": "^0.2.6",
-    "karma-junit-reporter": "^.git.git.git0.2.2"
+    "karma-junit-reporter": "^0.2.2"
   },
   "scripts": {
     "postinstall": "bower install",

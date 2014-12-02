@@ -1,7 +1,7 @@
 {
   "name": "busao",
   "description": "Saiba quais ônibus passam na sua rua",
-  "version": "0.1",
+  "version": "0.0.1",
   "homepage": "http://busao.github.com",
   "license": "MIT",
   "private": true,
