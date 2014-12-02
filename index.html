@@ -10,6 +10,7 @@
     <script src="js/busao.js"></script>
     <script src="js/indexController.js"></script>
     <script src="js/linhasService.js"></script>
+    <script src="js/form-linhas-directive.js"></script>
   </head>
   <body>
 
@@ -23,21 +24,7 @@
 
         <div class="row">
           <div class="large-6 large-centered medium-9 medium-centered small-12 small-centered columns">
-            <form ng-submit="index.getLinhas(index.query)">
-              <div class="row">
-                <div class="large-12 columns">
-                  <div class="row collapse">
-                    <div class="small-10 columns">
-                      <input ng-model="index.query"
-                        type="text" placeholder="Digite o nome da rua, número ou nome da linha..."/>
-                    </div>
-                    <div class="small-2 columns">
-                      <button type="submit" class="button postfix">Buscar</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
+            <form-linhas></form-linhas>
           </div>
         </div>
         <div class="row">
