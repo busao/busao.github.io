@@ -2,3 +2,15 @@
   text-align: justify;
   line-height: 140%;
 }
+
+#table-detalhes-itinerario tbody{
+  vertical-align: top;
+}
+
+#table-detalhes-itinerario table{
+  border: none;
+}
+
+#table-detalhes-itinerario {
+  border: 1px  solid black;
+}
