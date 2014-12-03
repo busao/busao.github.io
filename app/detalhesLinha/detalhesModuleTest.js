@@ -1,14 +1,14 @@
 'use strict';
 
-describe('busao.view2 module', function() {
+describe('busao.detalhes module', function() {
 
-  beforeEach(module('busao.view2'));
+  beforeEach(module('busao.detalhes'));
 
-  describe('view2 controller', function(){
+  describe('DetalhesController', function(){
 
     it('should ....', inject(function($controller) {
       //spec body
-      var view2Ctrl = $controller('View2Ctrl');
+      var view2Ctrl = $controller('DetalhesController');
       expect(view2Ctrl).toBeDefined();
     }));
 

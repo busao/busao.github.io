@@ -3,7 +3,7 @@
 
   describe('Módulo busao.linhas', function() {
 
-    beforeEach(module('busao.linhas'));
+    beforeEach(module('busao'));
 
     describe('LinhasController', function() {
 
@@ -12,7 +12,6 @@
         var linhasCtrl = $controller('LinhasController', {$scope:scope});
         expect(linhasCtrl).toBeDefined();
         expect(linhasCtrl.getLinhas).toBeDefined();
-        expect(linhasCtrl.isAlgumaLinhaSelecionada).toBeDefined();
         expect(linhasCtrl.setLinhaAtual).toBeDefined();
       }));
 

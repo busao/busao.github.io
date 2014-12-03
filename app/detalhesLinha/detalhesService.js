@@ -1,6 +1,6 @@
 (function() {
   angular
-    .module("busao")
+    .module("busao.detalhes")
     .factory('detalhesService', [detalhesService]);
 
   function detalhesService() {
