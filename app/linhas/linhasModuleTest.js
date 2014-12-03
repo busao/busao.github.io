@@ -1,16 +1,29 @@
-'use strict';
+(function() {
+  'use strict';
 
-describe('myApp.view1 module', function() {
+  describe('Módulo busao.linhas', function() {
 
-  beforeEach(module('myApp.view1'));
+    beforeEach(module('busao.linhas'));
 
-  describe('view1 controller', function(){
+    describe('LinhasController', function() {
 
-    it('should ....', inject(function($controller) {
-      //spec body
-      var view1Ctrl = $controller('View1Ctrl');
-      expect(view1Ctrl).toBeDefined();
-    }));
+      it('deveria estar definido', inject(function($controller) {
+        var scope = {};
+        var linhasCtrl = $controller('LinhasController', {$scope:scope});
+        expect(linhasCtrl).toBeDefined();
+        expect(linhasCtrl.getLinhas).toBeDefined();
+        expect(linhasCtrl.isAlgumaLinhaSelecionada).toBeDefined();
+        expect(linhasCtrl.setLinhaAtual).toBeDefined();
+      }));
 
+      it('deveria ter um estado inicial', inject(function($controller) {
+        var scope = {};
+        var linhasCtrl = $controller('LinhasController', {$scope:scope});
+        expect(linhasCtrl.linhaAtual).toEqual(null);
+        expect(linhasCtrl.linhas.length).toEqual(0);
+        expect(linhasCtrl.query).toEqual("");
+      }));
+
+    });
   });
-});
+})();
