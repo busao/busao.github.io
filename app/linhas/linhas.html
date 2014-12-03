@@ -1,1 +1,38 @@
-<p>This is the partial for view 1.</p>
+<div class="row" ng-controller="LinhasController as linhasCtrl">
+  <div class="large-12 large-centered columns">
+    <div class="row">
+      <div class="large-2 medium-3 small-4 large-centered medium-centered small-centered columns">
+        <h1>Busão</ h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-6 large-centered medium-9 medium-centered small-12 small-centered columns">
+        <form ng-submit="linhasCtrl.getLinhas(linhasCtrl.query)">
+          <div class="row">
+            <div class="large-12 columns">
+              <div class="row collapse">
+                <div class="small-10 columns">
+                  <input ng-model="linhasCtrl.query"
+                    type="text" placeholder="Digite o nome da rua, número ou nome da linha..."/>
+                </div>
+                <div class="small-2 columns">
+                  <button type="submit" class="button postfix">Buscar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 large-centered medium-9 medium-centered small-12 small-centered columns">
+        <ul class="pricing-table">
+          <li ng-repeat="linha in linhasCtrl.linhas" class="bullet-item">
+            <a ng-click="linhasCtrl.setLinhaAtual(linha)" href="#">{{linha.nome}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
