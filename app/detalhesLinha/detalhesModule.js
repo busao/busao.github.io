@@ -13,7 +13,7 @@
   .controller('DetalhesController', ['detalhesService', DetalhesController]);
 
   function DetalhesController(detalhesService) {
-    detalhesCtrl = this;
+    var detalhesCtrl = this;
 
     detalhesCtrl.getLinhaAtual = getLinhaAtual;
 

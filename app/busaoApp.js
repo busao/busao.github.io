@@ -5,7 +5,7 @@
   angular.module('busao', [
     'ngRoute',
     'busao.linhas',
-    'busao.view2',
+    'busao.detalhes',
     'busao.version'
   ]).
   config(['$routeProvider', function($routeProvider) {

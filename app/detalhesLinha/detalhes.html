@@ -1,5 +1,30 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<table ng-controller="DetalhesController as detalhes">
+  <thead>
+    <tr>
+      <th>Ida</th>
+      <th>Volta</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <table>
+          <tbody>
+            <tr ng-repeat="rua in detalhes.getLinhaAtual().ida track by $index">
+              <td>{{rua}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+      <td>
+        <table>
+          <tbody>
+            <tr ng-repeat='rua in detalhes.getLinhaAtual().volta track by $index'>
+              <td>{{rua}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
