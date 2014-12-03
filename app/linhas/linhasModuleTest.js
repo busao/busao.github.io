@@ -19,7 +19,6 @@
       it('deveria ter um estado inicial', inject(function($controller) {
         var scope = {};
         var linhasCtrl = $controller('LinhasController', {$scope:scope});
-        expect(linhasCtrl.linhaAtual).toEqual(null);
         expect(linhasCtrl.linhas.length).toEqual(0);
         expect(linhasCtrl.query).toEqual("");
       }));

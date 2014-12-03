@@ -10,15 +10,13 @@
     });
   }])
 
-  .controller('LinhasController', ['linhasService', LinhasController]);
+  .controller('LinhasController', ['linhasService', 'detalhesService', LinhasController]);
 
-  function LinhasController(linhasService) {
+  function LinhasController(linhasService, detalhesService) {
     var linhasCtrl = this;
 
     linhasCtrl.getLinhas = getLinhas;
-    linhasCtrl.isAlgumaLinhaSelecionada = isAlgumaLinhaSelecionada;
     linhasCtrl.setLinhaAtual = setLinhaAtual;
-    linhasCtrl.linhaAtual = null;
     linhasCtrl.linhas = [];
     linhasCtrl.query = '';
 
@@ -28,13 +26,8 @@
       });
     }
 
-    function isAlgumaLinhaSelecionada() {
-      return linhasCtrl.linhaAtual;
-    }
-
     function setLinhaAtual(linha) {
-      linhasCtrl.linhaAtual = linha;
-      console.log('Linha ' + linha.numero + ' selecionada.');
+      detalhesService.setLinhaOnibus(linha);
     }
   }
 
