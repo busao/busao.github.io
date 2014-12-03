@@ -10,10 +10,16 @@
     });
   }])
 
-  .controller('DetalhesController', [DetalhesController]);
+  .controller('DetalhesController', ['detalhesService', DetalhesController]);
 
-  function DetalhesController() {
+  function DetalhesController(detalhesService) {
+    detalhesCtrl = this;
 
+    detalhesCtrl.getLinhaAtual = getLinhaAtual;
+
+    function getLinhaAtual() {
+      return detalhesService.getLinhaOnibus();
+    }
   }
 
 })();
